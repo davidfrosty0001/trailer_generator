@@ -1,0 +1,407 @@
+	<!DOCTYPE html>
+<html>
+<script type="text/javascript" src='./frozen.js'></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.slidecontainer {
+			width: 80%;
+		}
+
+		.slider {
+			-webkit-appearance: none;
+			width: 100%;
+			height: 25px;
+			background: #d3d3d3;
+			outline: none;
+			opacity: 0.7;
+			-webkit-transition: .2s;
+			transition: opacity .2s;
+		}
+
+		.slider:hover {
+			opacity: 1;
+		}
+
+		.slider::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			appearance: none;
+			width: 25px;
+			height: 25px;
+			background: #4CAF50;
+			cursor: pointer;
+		}
+
+		.slider::-moz-range-thumb {
+			width: 25px;
+			height: 25px;
+			background: #4CAF50;
+			cursor: pointer;
+		}
+		p {
+			margin: 5px 6px;
+		}
+		.first-row{
+			margin-top: 25px;
+			height: 20px;
+		}
+
+		.bottom{
+			margin: 25px 20px 20px;
+			margin-top: 25px;
+			bottom: 0;
+			position: fixed;
+			background-color: rgba(0,0,0,0.2);
+		}
+		.svg_line{
+			stroke: rgb(255,0,0);
+			stroke-width: 2;
+		}
+		#timeline {
+			width: 100%;
+			height: 200px
+		}
+		.third-row{
+			margin-top: 10px;
+			height: auto;
+		}
+		.right-lower{
+			height: 50%;
+			margin-top: 10px;
+			bottom: 0;
+			padding: 0 20px;
+		    box-sizing: border-box;
+		    overflow: hidden;
+		}
+		.right-upper{
+			height: 30%;
+			margin-top: 10px;
+			top: 0;
+			padding: 0 20px;
+		}
+		.right-middle{
+			height: 10%;
+			margin-top: 10px;
+			padding: 0 20px;
+		}
+		body{
+			overflow: hidden;
+			height: 100vh;
+		}
+		video{
+			/*display: inline;*/
+			float: left;
+		}
+		.subtitle{
+			height: 50px;
+			float:right;
+		}
+		h1{
+			font-size: 120px;
+			padding: 0 200px;
+		}
+
+		.left{
+		    box-sizing: border-box;
+			width: 20vw;
+			float: left;
+			height: 80vh;
+			padding: 25px;
+		}
+
+		.middle-left{
+		    box-sizing: border-box;
+			width: 25vw;
+			float: left;
+			height: 80vh;
+		}
+
+		.middle-right{
+		    box-sizing: border-box;
+			width: 25vw;
+			float: left;
+			height: 80vh;
+		}
+
+		.right{
+		    box-sizing: border-box;
+			width: 52vw;
+			float: right;
+			height: 80vh;
+		}
+
+		.top{
+			display: table-cell;
+			vertical-align: middle;
+			width: 100vw;
+			top: 0;
+			height: 5vh;
+			background-color: #ccc;
+		}
+
+		.radio{
+			width: 100%
+		}
+
+		#myVideo{
+			width: 100%    !important
+		}
+
+	</style>
+</head>
+
+<body>
+
+	<div class="top">
+		<h3 style="margin: 0; margin: 0 20px"> Recurating the Youku Clips</h3>
+	</div>
+	<div class="col-lg-3">
+		<div>
+			<h3 >select movie</h3>
+			<select class="radio" id="movieSelect" size = 5>
+				<option value="frozen" selected="selected">frozen</option>
+				<option value="pirates">pirates</option>
+				<option value="indidious">indidious</option>
+				<option value="kongfu_panda">kongfu_panda</option>
+				<option value="2012">2012</option>
+
+			</select>
+		</div>
+		<div>
+			<h3>select music</h3>
+			<select class="radio" id="musicSelect" size = 13>
+				<option value="animals">animals</option>
+				<option value="belyansky_new_york">belyansky_new_york</option>
+				<option value="breathe">breathe</option>
+				<option value="chase_our_shadows">chase_our_shadows</option>
+				<option value="come_together">come_together</option>
+				<option value="darkshine_violent_revenge">darkshine_violent_revenge</option>
+				<option value="dunkirk">dunkirk</option>
+				<option value="hard_hip-hop">hard_hip-hop</option>
+				<option value="hes_a_pirate">hes_a_pirate</option>
+				<option value="letitgo" selected="selected">letitgo</option>
+				<option value="mission_impossible">mission_impossible</option>
+				<option value="nightfall">nightfall</option>
+				<option value="pilgrimage">pilgrimage</option>
+				<option value="stories_of_the_old_mansion">stories_of_the_old_mansion</option>
+			</select>
+		</div>
+		<div>
+			<h3>select clip length</h3>
+			<select class="radio" id="lengthSelect" size = 4>
+				<option value="1">5</option>
+				<option value="2">10</option>
+				<option value="3" selected="selected">15</option>
+			</select>
+		</div>
+	</div>
+
+	<div class="col-lg-3">
+
+		<h2>Color</h2>
+		
+		<div style="width: auto; height: 85px;">
+			<h3>Saturation</h3>
+			<div style="float: left; width: 10%; height: 20px; text-align: right;">
+				<p>0</p>
+			</div>
+			<div class="slidecontainer" style="float: left;">
+				<input type="range" min="0" max="100" value="50" class="slider">
+			</div>
+			<div style="float: left; width: 10%; height: 20px">
+				<p>100%</p>
+			</div>
+		</div>
+
+		<div style="width: auto; height: 85px;">
+			<h3>Brightness</h3>
+			<div style="float: left; width: 10%; height: 20px; text-align: right;">
+				<p>0</p>
+			</div>
+			<div class="slidecontainer" style="float: left;">
+				<input type="range" min="0" max="100" value="50" class="slider">
+			</div>
+			<div style="float: left; width: 10%; height: 20px">
+				<p>100%</p>
+			</div>
+		</div>
+
+		<div style="width: auto; height: 85px;">
+			<h3>Dominant Color</h3>
+			<div style="float: left; width: 10%; height: 20px; text-align: right;">
+				<p>0</p>
+			</div>
+			<div class="slidecontainer" style="float: left;">
+				<input type="range" min="0" max="100" value="50" class="slider">
+			</div>
+			<div style="float: left; width: 10%; height: 20px">
+				<p>100%</p>
+			</div>
+		</div>
+
+		<h2>Danmu</h2>
+
+		<div style="width: auto; height: 85px;">
+			<h3>Repeatness</h3>
+			<div style="float: left; width: 10%; height: 20px; text-align: right;">
+				<p>Repeatness</p>
+			</div>
+			<div class="slidecontainer" style="float: left;">
+				<input type="range" min="0" max="100" value="50" class="slider">
+			</div>
+			<div style="float: left; width: 10%; height: 20px">
+				<p>Danmu Frequency</p>
+			</div>
+		</div>
+		<div>
+			<h3>Frequency</h3>
+			<div style="float: left; width: 10%; height: 20px; text-align: right;">
+				<p>Danmu Repeatness</p>
+			</div>
+			<div class="slidecontainer" style="float: left;">
+				<input type="range" min="0" max="100" value="50" class="slider">
+			</div>
+			<div style="float: left; width: 10%; height: 20px">
+				<p>Danmu Frequency</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-lg-6">
+
+		<div class="right-upper">
+			
+		</div>
+		
+		<div class="right-middle">
+			<div class='third-row'>
+		
+			</div>
+		</div>
+
+		<div class='right-lower'>
+			<video id="myVideo" autoplay onended="run();">   
+				<source id="ss" src="frozen_clip/0.mp4" type='video/mp4'>
+			</video>
+
+			<div class="subtitle">
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class='bottom'>
+		<canvas id='timeline' height="210" width="700">
+		</canvas>
+	</div>
+
+</body>
+
+<script type="text/javascript">
+	// console.log(frozen_data);
+	var bulk_length = Object.keys(frozen_data).length;
+	bulk_length = 6500000 / 5000;
+	var c = document.getElementById("timeline");
+	var ctx = c.getContext("2d");
+	ctx.canvas.width  = window.innerWidth;
+	ctx.font="15px Arial";
+	window.temp_id   = [0, 10, 20, 30, 50];
+
+	$('.slider').on('change', function(){
+		console.log("change");
+		var ratio = $(this).val();
+		generate_timeline(ratio);
+	});
+
+	ctx.lineWidth=2;
+	// $('.slider').value = 50
+	function generate_timeline(ratio){
+
+		ctx.clearRect(0, 0, c.width, c.height);
+		var temp_width = $('#timeline').width();
+		console.log(ratio)
+		// var ratio = 30
+		var order = new Array(45);
+		var sortable = [];
+		for (const [key, value] of Object.entries(frozen_data)){
+			// console.log(ratio);
+			// console.log(value[1] * parseInt(ratio) + value[2] * (100 - parseInt(ratio)))
+			sortable.push([key, value[1] * (100 - parseInt(ratio)) + value[2] * parseInt(ratio) / 2, value[0]])
+			// console.log(value[1])
+		}
+		// console.log(sortable)
+
+		sortable.sort(function(a, b) {
+			return b[1] - a[1];
+		});
+
+		sortable = sortable.slice(0, 50)
+
+		// console.log(sortable);
+		var temp_sent = [];
+		window.temp_id = [];
+		var temp_x;
+		for (var i = 0; i < sortable.length; i++) {
+			// console.log(sortable[i][0] * 1.0 / bulk_length * temp_width);
+			temp_x = sortable[i][0] * 1.0 / bulk_length * temp_width;
+			// console.log(temp_x)
+			ctx.beginPath();
+			ctx.moveTo(temp_x, 0);
+			ctx.lineTo(temp_x, 210);
+			ctx.strokeStyle = 'rgba(200, 20, 20, ' + (i * 1.0 / sortable.length) + ')';
+			// console.log((i * 1.0 / sortable.length) * 255)
+			ctx.stroke();
+			ctx.fillText(sortable[i][2], temp_x, Math.random() * 150 + 25);
+			temp_sent.push(sortable[i][2] + ' ')
+			window.temp_id.push(sortable[i][0])
+		}
+		window.temp_id.sort(function(a, b) {return a - b;});
+		console.log(window.temp_id)
+		$(".third-row").empty();
+		$(".third-row").append(`<p>` + temp_sent + `</p>`);
+
+		window.video_count = 0;
+		videoPlayer.setAttribute("src","frozen_clip/"+ window.temp_id[video_count]+".mp4");
+		window.video.load();
+		window.video.play();
+		window.video.currentTime = 0;
+		$(".subtitle").empty();
+		$(".subtitle").append(`<h5>` + 0 + `</h5>`);
+
+
+	}
+
+	window.video_count = 0;
+	videoPlayer = document.getElementById("ss");		
+	window.video=document.getElementById("myVideo");
+
+	function run(){
+		window.video_count++;
+		if (window.video_count == window.temp_id.length) {
+			window.video_count = 0;
+			videoPlayer.setAttribute("src","frozen_clip/"+ window.temp_id[video_count]+".mp4");
+			window.video.currentTime = 0;
+			$(".subtitle").empty();
+			$(".subtitle").append(`<h5>` + 0 + `</h5>`);
+
+		}
+		else{
+			videoPlayer.setAttribute("src","frozen_clip/"+ window.temp_id[video_count]+".mp4");
+			$(".subtitle").empty();
+			$(".subtitle").append(`<h5>` + window.video_count + `</h5>`);
+			window.video.load();
+			window.video.play();
+		}
+	}
+
+	generate_timeline(50)
+</script>
+</html>
