@@ -21,6 +21,28 @@ h3,p{
 .header{
 	top:10px;
 }
+
+/*** input *******/
+.radio input[type=radio], .radio-inline input[type=radio] {
+	position: absolute;
+	margin-top: 4px\9;
+	margin-left: -20px;
+	margin-right: 50px;
+	padding-right:30px;
+}
+
+.checkbox, .radio {
+	position: relative;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	margin-left: 20px;
+	padding-right:30px;
+
+}
+
+
+/*** slider *******/
 .slidecontainer {
 	width: 80%;
 }
