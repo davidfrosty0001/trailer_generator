@@ -1,3 +1,13 @@
+body{
+	font-family: 'Lucida Grande', sans-serif;
+	background-color:black;
+	color: #00FEFC;
+}
+
+h3,p{
+	color: #00FEFC;
+}
+
 .slidecontainer {
 	width: 80%;
 }
@@ -63,10 +73,7 @@
 	margin-top: 10px;
 	padding: 0 20px;
 }
-body{
-	overflow: hidden;
-	height: 100vh;
-}
+
 video{
 	/*display: inline;*/
 	float: left;
@@ -78,48 +85,6 @@ video{
 h1{
 	font-size: 120px;
 	padding: 0 200px;
-}
-
-.left{
-    box-sizing: border-box;
-	width: 20vw;
-	float: left;
-	height: 80vh;
-	padding: 25px;
-}
-
-.middle-left{
-    box-sizing: border-box;
-	width: 25vw;
-	float: left;
-	height: 80vh;
-}
-
-.middle-right{
-    box-sizing: border-box;
-	width: 25vw;
-	float: left;
-	height: 80vh;
-}
-
-.right{
-    box-sizing: border-box;
-	width: 52vw;
-	float: right;
-	height: 80vh;
-}
-
-.top{
-	display: table-cell;
-	vertical-align: middle;
-	width: 100vw;
-	top: 0;
-	height: 5vh;
-	background-color: #ccc;
-}
-
-.radio{
-	width: 100%
 }
 
 #myVideo{
