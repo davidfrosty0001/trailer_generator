@@ -18,143 +18,144 @@
 
 <body>
 	<!-- header -->
-	<div class="col-lg-12">
+	<div class="container header">
 		<h3 style="margin: 0; margin: 0 20px"> Recurating the Youku Clips</h3>
 	</div>
-
-	<!-- 1st column -->
-	<div class="col-lg-3">
-		<div>
-			<h3 >select movie</h3>
-			<form action=“” class="radio" id="movieSelect">
-				<input type="radio" value="frozen" selected="selected">frozen
-				<input type="radio" value="pirates">pirates
-				<input type="radio" value="indidious">indidious
-				<input type="radio" value="kongfu_panda">kongfu_panda
-				<input type="radio" value="2012">2012
-			</form>
-		</div>
-		<div>
-			<h3>select music</h3>
-			<form class="radio" id="musicSelect" size = 13>
-				<input type="radio" value="animals">animals
-				<input type="radio" value="belyansky_new_york">belyansky_new_york
-				<input type="radio" value="breathe">breathe
-				<input type="radio" value="chase_our_shadows">chase_our_shadows
-				<input type="radio" value="come_together">come_together
-				<input type="radio" value="darkshine_violent_revenge">darkshine_violent_revenge
-				<input type="radio" value="dunkirk">dunkirk
-				<input type="radio" value="hard_hip-hop">hard_hip-hop
-				<input type="radio" value="hes_a_pirate">hes_a_pirate
-				<input type="radio" value="letitgo" selected="selected">letitgo
-				<input type="radio" value="mission_impossible">mission_impossible
-				<input type="radio" value="nightfall">nightfall
-				<input type="radio" value="pilgrimage">pilgrimage
-				<input type="radio" value="stories_of_the_old_mansion">stories_of_the_old_mansion
-			</form>
-		</div>
-		<div>
-			<h3>select clip length</h3>
-			<form class="radio" id="lengthSelect" size = 4>
-				<input type="radio" value="1">5
-				<input type="radio" value="2">10
-				<input type="radio" value="3" selected="selected">15
-			</form>
-		</div>
-	</div>
-	<!-- 2nd column -->
-	<div class="col-lg-3">
-
-		<h2>Color</h2>
-		
-		<div>
-			<h3>Saturation</h3>
-			<div style="float: left; width: 10%; height: 20px; text-align: right;">
-				<p>0</p>
+	<div class="container">
+		<!-- 1st column -->
+		<div class="col-lg-3">
+			<div class="box">
+				<h3 >select movie</h3>
+				<form action=“” class="radio" id="movieSelect">
+					<input type="radio" value="frozen" selected="selected">frozen
+					<input type="radio" value="pirates">pirates
+					<input type="radio" value="indidious">indidious
+					<input type="radio" value="kongfu_panda">kongfu_panda
+					<input type="radio" value="2012">2012
+				</form>
 			</div>
-			<div class="slidecontainer" style="float: left;">
-				<input type="range" min="0" max="100" value="50" class="slider">
+			<div class="box">
+				<h3>select music</h3>
+				<form class="radio" id="musicSelect" size = 13>
+					<input type="radio" value="animals">animals
+					<input type="radio" value="belyansky_new_york">belyansky_new_york
+					<input type="radio" value="breathe">breathe
+					<input type="radio" value="chase_our_shadows">chase_our_shadows
+					<input type="radio" value="come_together">come_together
+					<input type="radio" value="darkshine_violent_revenge">darkshine_violent_revenge
+					<input type="radio" value="dunkirk">dunkirk
+					<input type="radio" value="hard_hip-hop">hard_hip-hop
+					<input type="radio" value="hes_a_pirate">hes_a_pirate
+					<input type="radio" value="letitgo" selected="selected">letitgo
+					<input type="radio" value="mission_impossible">mission_impossible
+					<input type="radio" value="nightfall">nightfall
+					<input type="radio" value="pilgrimage">pilgrimage
+					<input type="radio" value="stories_of_the_old_mansion">stories_of_the_old_mansion
+				</form>
 			</div>
-			<div style="float: left; width: 10%; height: 20px">
-				<p>100%</p>
+			<div class="box">
+				<h3>select clip length</h3>
+				<form class="radio" id="lengthSelect" size = 4>
+					<input type="radio" value="1">5
+					<input type="radio" value="2">10
+					<input type="radio" value="3" selected="selected">15
+				</form>
 			</div>
 		</div>
+		<!-- 2nd column -->
+		<div class="col-lg-3 box">
+			<div class="box">
 
-		<div >
-			<h3>Brightness</h3>
-			<div style="float: left; width: 10%; height: 20px; text-align: right;">
-				<p>0</p>
+				<h2>Color</h2>
+				
+				<div>
+					<h3>Saturation</h3>
+					<div style="float: left; width: 10%; height: 20px; text-align: right;">
+						<p>0</p>
+					</div>
+					<div class="slidecontainer" style="float: left;">
+						<input type="range" min="0" max="100" value="50" class="slider">
+					</div>
+					<div style="float: left; width: 10%; height: 20px">
+						<p>100%</p>
+					</div>
+				</div>
 			</div>
-			<div class="slidecontainer" style="float: left;">
-				<input type="range" min="0" max="100" value="50" class="slider">
+			<div >
+				<h3>Brightness</h3>
+				<div style="float: left; width: 10%; height: 20px; text-align: right;">
+					<p>0</p>
+				</div>
+				<div class="slidecontainer" style="float: left;">
+					<input type="range" min="0" max="100" value="50" class="slider">
+				</div>
+				<div style="float: left; width: 10%; height: 20px">
+					<p>100%</p>
+				</div>
 			</div>
-			<div style="float: left; width: 10%; height: 20px">
-				<p>100%</p>
-			</div>
-		</div>
 
-		<div >
-			<h3>Dominant Color</h3>
-			<form class="radio" id="lengthSelect" size = 4>
-				<input type="radio" value="red">red
-				<input type="radio" value="blue">blue
-				<input type="radio" value="yellow" selected="selected">yellow
-			</form>
-		</div>
+			<div >
+				<h3>Dominant Color</h3>
+				<form class="radio" id="lengthSelect" size = 4>
+					<input type="radio" value="red">red
+					<input type="radio" value="blue">blue
+					<input type="radio" value="yellow" selected="selected">yellow
+				</form>
+			</div>
 
-		<h2>Danmu</h2>
+			<h2>Danmu</h2>
 
-		<div >
-			<h3>Repeatness</h3>
-			<div style="float: left; width: 10%; height: 20px; text-align: right;">
-				<p>Repeatness</p>
+			<div >
+				<h3>Repeatness</h3>
+				<div style="float: left; width: 10%; height: 20px; text-align: right;">
+					<p>Repeatness</p>
+				</div>
+				<div class="slidecontainer" style="float: left;">
+					<input type="range" min="0" max="100" value="50" class="slider">
+				</div>
+				<div style="float: left; width: 10%; height: 20px">
+					<p>Danmu Frequency</p>
+				</div>
 			</div>
-			<div class="slidecontainer" style="float: left;">
-				<input type="range" min="0" max="100" value="50" class="slider">
-			</div>
-			<div style="float: left; width: 10%; height: 20px">
-				<p>Danmu Frequency</p>
-			</div>
-		</div>
-		<div>
-			<h3>Frequency</h3>
-			<div style="float: left; width: 10%; height: 20px; text-align: right;">
-				<p>Danmu Repeatness</p>
-			</div>
-			<div class="slidecontainer" style="float: left;">
-				<input type="range" min="0" max="100" value="50" class="slider">
-			</div>
-			<div style="float: left; width: 10%; height: 20px">
-				<p>Danmu Frequency</p>
-			</div>
-		</div>
-	</div>
-
-
-	<!-- 3rd column -->
-	<div class="col-lg-6">
-
-		<div class="right-upper">
-			
-		</div>
-		
-		<div class="right-middle">
-			<div class='third-row'>
-		
+			<div>
+				<h3>Frequency</h3>
+				<div style="float: left; width: 10%; height: 20px; text-align: right;">
+					<p>Danmu Repeatness</p>
+				</div>
+				<div class="slidecontainer" style="float: left;">
+					<input type="range" min="0" max="100" value="50" class="slider">
+				</div>
+				<div style="float: left; width: 10%; height: 20px">
+					<p>Danmu Frequency</p>
+				</div>
 			</div>
 		</div>
 
-		<div class='right-lower'>
-			<video id="myVideo" autoplay onended="run();">   
-				<source id="ss" src="frozen_clip/0.mp4" type='video/mp4'>
-			</video>
 
-			<div class="subtitle">
+		<!-- 3rd column -->
+		<div class="col-lg-6">
+
+			<div class="right-upper">
 				
 			</div>
+			
+			<div class="right-middle">
+				<div class='third-row'>
+			
+				</div>
+			</div>
+
+			<div class='right-lower'>
+				<video id="myVideo" autoplay onended="run();">   
+					<source id="ss" src="frozen_clip/0.mp4" type='video/mp4'>
+				</video>
+
+				<div class="subtitle">
+					
+				</div>
+			</div>
 		</div>
 	</div>
-	
 	<div class='col-lg-12'>
 		<canvas id='timeline' height="210" width="700">
 		</canvas>

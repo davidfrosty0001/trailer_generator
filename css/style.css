@@ -5,9 +5,22 @@ body{
 }
 
 h3,p{
-	color: #00FEFC;
+	
 }
 
+.box{
+	border-style: solid;
+	border-width: 1px;
+	border-color:#00FEFC;
+	background-color: rgba(0, 254, 252, 0.2);
+	box-shadow: 0 0 3px 3px rgba(0, 254, 252, 0.2), 0 0 7px 7px rgba(0, 254, 252, 0.19);
+
+	padding:10px;
+}	
+
+.header{
+	top:10px;
+}
 .slidecontainer {
 	width: 80%;
 }
@@ -90,3 +103,4 @@ h1{
 #myVideo{
 	width: 100%    !important
 }
+
