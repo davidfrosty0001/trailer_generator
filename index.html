@@ -65,14 +65,16 @@
 			</div>
 		</div>
 		<!-- 2nd column -->
-		<div class="col-lg-3 col-md-3 col-sm-3">
+		<div class="col-lg-3 col-md-3 col-sm-3 box">
 			<button onclick="myFunction()">Try it</button>
 			<form class="radio" id="curationType">
 
 				<!-- 2nd column -->
-				<div class="box">
+				<div >
 					<h3>color</h3>
-					<input type="radio" name="curationtype" value="1" selected="selected" checked>Saturation<br>
+					<div>
+						<input type="radio" name="curationtype" value="1" selected="selected" checked>Saturation<br>
+					</div>
 					<div>
 						<h3>Saturation</h3>
 						<div style="float: left; width: 10%; height: 20px; text-align: right;">
@@ -85,7 +87,9 @@
 							<p>100%</p>
 						</div>
 					</div>
-					<input type="radio" name="curationtype" value="2">Brightness<br>
+					<div>
+						<input type="radio" name="curationtype" value="1" selected="selected" checked>Brightness<br>
+					</div>
 					<div >
 						<h3>Brightness</h3>
 						<div style="float: left; width: 10%; height: 20px; text-align: right;">
@@ -98,9 +102,9 @@
 							<p>100%</p>
 						</div>
 					</div>
-					<input type="radio" value="3" name="curationtype" selected="selected">sadddd<br>
-					
-					<input type="radio" name="curationtype" value="2">Brightness<br>
+					<div>
+						<input type="radio" name="curationtype" value="1" selected="selected" checked>Dominant Color<br>
+					</div>
 					<div >
 						<h3>Dominant Color</h3>
 						<form id="color" class="radio" id="lengthSelect" size = 4>
@@ -111,10 +115,12 @@
 					</div>
 				</div>
 				
-				<div class="box">
+				<div >
 
 					<h2>Danmu</h2>
-					<input type="radio" value="3" name="curationtype" selected="selected">sadddd<br>
+					<div>
+						<input type="radio" name="curationtype" value="1" selected="selected" checked>Repeatness<br>
+					</div>
 					<div >
 						<h3>Repeatness</h3>
 						<div style="float: left; width: 10%; height: 20px; text-align: right;">
@@ -127,7 +133,9 @@
 							<p>Danmu Frequency</p>
 						</div>
 					</div>
-					<input type="radio" value="3" name="curationtype" selected="selected">sadddd<br>
+					<div>
+						<input type="radio" name="curationtype" value="1" selected="selected" checked>Frequency<br>
+					</div>
 					<div>
 						<h3>Frequency</h3>
 						<div style="float: left; width: 10%; height: 20px; text-align: right;">
