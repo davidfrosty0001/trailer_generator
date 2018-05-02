@@ -67,75 +67,80 @@
 		<!-- 2nd column -->
 		<div class="col-lg-3 col-md-3 col-sm-3">
 			<button onclick="myFunction()">Try it</button>
-			<form class="radio" id="curationtype">
-			<div class="box">
+			<form class="radio" id="curationType">
+
+				<!-- 2nd column -->
+				<div class="box">
+					<h3>color</h3>
+					<input type="radio" name="curationtype" value="1" selected="selected" checked>Saturation<br>
+					<div>
+						<h3>Saturation</h3>
+						<div style="float: left; width: 10%; height: 20px; text-align: right;">
+							<p>0</p>
+						</div>
+						<div id="saturation" class="slidecontainer" style="float: left;">
+							<input  id="saturation"  type="range" min="0" max="100" value="50" class="slider">
+						</div>
+						<div style="float: left; width: 10%; height: 20px">
+							<p>100%</p>
+						</div>
+					</div>
+					<input type="radio" name="curationtype" value="2">Brightness<br>
+					<div >
+						<h3>Brightness</h3>
+						<div style="float: left; width: 10%; height: 20px; text-align: right;">
+							<p>0</p>
+						</div>
+						<div class="slidecontainer" style="float: left;">
+							<input  id="brightness"  type="range" min="0" max="100" value="50" class="slider">
+						</div>
+						<div style="float: left; width: 10%; height: 20px">
+							<p>100%</p>
+						</div>
+					</div>
+					<input type="radio" value="3" name="curationtype" selected="selected">sadddd<br>
+					
+					<input type="radio" name="curationtype" value="2">Brightness<br>
+					<div >
+						<h3>Dominant Color</h3>
+						<form id="color" class="radio" id="lengthSelect" size = 4>
+							<input type="radio" value="red">red
+							<input type="radio" value="blue">blue
+							<input type="radio" value="yellow" selected="selected">yellow
+						</form>
+					</div>
+				</div>
 				
-				<input type="radio" name="curationtype1" value="1" selected="selected" checked>Saturation<br>
-				<div>
-					<h3>Saturation</h3>
-					<div style="float: left; width: 10%; height: 20px; text-align: right;">
-						<p>0</p>
-					</div>
-					<div id="saturation" class="slidecontainer" style="float: left;">
-						<input  id="saturation"  type="range" min="0" max="100" value="50" class="slider">
-					</div>
-					<div style="float: left; width: 10%; height: 20px">
-						<p>100%</p>
-					</div>
-				</div>
-				<input type="radio" name="curationtype1" value="2">Brightness<br>
-				<div >
-					<h3>Brightness</h3>
-					<div style="float: left; width: 10%; height: 20px; text-align: right;">
-						<p>0</p>
-					</div>
-					<div class="slidecontainer" style="float: left;">
-						<input  id="brightness"  type="range" min="0" max="100" value="50" class="slider">
-					</div>
-					<div style="float: left; width: 10%; height: 20px">
-						<p>100%</p>
-					</div>
-				</div>
-				<input type="radio" value="3" name="curationtype1" selected="selected">sadddd<br>
+				<div class="box">
 
-				<div >
-					<h3>Dominant Color</h3>
-					<form id="color" class="radio" id="lengthSelect" size = 4>
-						<input type="radio" value="red">red
-						<input type="radio" value="blue">blue
-						<input type="radio" value="yellow" selected="selected">yellow
-					</form>
-				</div>
-			</div>
-			
-			<div class="box">
-				<h2>Danmu</h2>
-
-				<div >
-					<h3>Repeatness</h3>
-					<div style="float: left; width: 10%; height: 20px; text-align: right;">
-						<p>Repeatness</p>
+					<h2>Danmu</h2>
+					<input type="radio" value="3" name="curationtype" selected="selected">sadddd<br>
+					<div >
+						<h3>Repeatness</h3>
+						<div style="float: left; width: 10%; height: 20px; text-align: right;">
+							<p>Repeatness</p>
+						</div>
+						<div class="slidecontainer" style="float: left;">
+							<input id="repeatness" type="range" min="0" max="100" value="50" class="slider">
+						</div>
+						<div style="float: left; width: 10%; height: 20px">
+							<p>Danmu Frequency</p>
+						</div>
 					</div>
-					<div class="slidecontainer" style="float: left;">
-						<input id="repeatness" type="range" min="0" max="100" value="50" class="slider">
-					</div>
-					<div style="float: left; width: 10%; height: 20px">
-						<p>Danmu Frequency</p>
-					</div>
-				</div>
-				<div>
-					<h3>Frequency</h3>
-					<div style="float: left; width: 10%; height: 20px; text-align: right;">
-						<p>Danmu Repeatness</p>
-					</div>
-					<div  class="slidecontainer" style="float: left;">
-						<input id="frequency" type="range" min="0" max="100" value="50" class="slider">
-					</div>
-					<div style="float: left; width: 10%; height: 20px">
-						<p>Danmu Frequency</p>
+					<input type="radio" value="3" name="curationtype" selected="selected">sadddd<br>
+					<div>
+						<h3>Frequency</h3>
+						<div style="float: left; width: 10%; height: 20px; text-align: right;">
+							<p>Danmu Repeatness</p>
+						</div>
+						<div  class="slidecontainer" style="float: left;">
+							<input id="frequency" type="range" min="0" max="100" value="50" class="slider">
+						</div>
+						<div style="float: left; width: 10%; height: 20px">
+							<p>Danmu Frequency</p>
+						</div>
 					</div>
 				</div>
-			</div>
 			</form>
 		</div>
 
