@@ -89,6 +89,18 @@ input[type=range] {
 }
 
 
+/*** second column *******/
+#color{
+	padding-left:20px;
+}
+
+input[type=checkbox], input[type=radio] {
+	margin: 4px 0 0;
+	margin-top: 1px\9;
+	line-height: normal;
+	margin-right:10px;
+}
+
 
 
 #timeline {
